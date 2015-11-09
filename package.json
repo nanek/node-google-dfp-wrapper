@@ -1,12 +1,11 @@
 {
-  "name": "node-google-dfp-wrapper",
+  "name": "@spanishdict/node-google-dfp-wrapper",
   "version": "1.0.0",
   "description": "Simplifies and promisifies calls to node-google-dfp.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/spanishdict/node-google-dfp-wrapper.git"
