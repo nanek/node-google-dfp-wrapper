@@ -1,6 +1,6 @@
 {
   "name": "@spanishdict/node-google-dfp-wrapper",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Simplifies and promisifies calls to node-google-dfp.",
   "main": "index.js",
   "scripts": {
