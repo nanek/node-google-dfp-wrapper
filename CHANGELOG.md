@@ -1,5 +1,8 @@
 # node-google-dfp-wrapper
 
+### 1.1.0
+- Add methods for querying and updating line-item-creative-associations.
+
 ### 1.0.1
 - Bug fix, enable local storage for caching.
 
