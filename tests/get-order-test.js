@@ -26,7 +26,7 @@ credentials = {
 
 chai.use(chaiAsPromised);
 
-describe('Dfp lib', function() {
+describe('getOrder', function() {
 
   var dfp;
 
@@ -34,7 +34,7 @@ describe('Dfp lib', function() {
     dfp = new Dfp(credentials, config, config.refreshToken);
   });
 
-  it('can get order id', function() {
+  it('should return order id', function() {
     return expect(dfp.getOrder('AMAZON_A_D_CONTENT_USA'))
       .to.eventually.equal('43116000');
   });
