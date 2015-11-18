@@ -2,7 +2,7 @@
 
 'use strict';
 
-var Replay = require('@spanishdict/replay'); //eslint-disable-line no-unused-vars
+var Replay = require('replay'); //eslint-disable-line no-unused-vars
 var chai = require("chai");
 var chaiAsPromised = require("chai-as-promised");
 var expect = chai.expect;
