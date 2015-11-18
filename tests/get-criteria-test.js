@@ -42,14 +42,14 @@ describe('Criteria methods', function() {
       .to.eventually.equal('597016');
   });
 
-  // it('getCriteriaValues should return value ids', function() {
-  //   var conditions = {
-  //     name: '0.95',
-  //     keyId: '597016'
-  //   }
-  //   return expect(dfp.getCriteriaValues(conditions))
-  //     .to.eventually.deep.equal(['140750957536']);
-  // })
+  it('getCriteriaValues should return value ids', function() {
+    var conditions = {
+      name: '0.95',
+      keyId: '597016'
+    }
+    return expect(dfp.getCriteriaValues(conditions))
+      .to.eventually.deep.equal(['140750957536']);
+  })
 });
 
 
