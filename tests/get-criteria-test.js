@@ -13,7 +13,7 @@ var config = require('../fixtures/setup/config');
 var credentials;
 
 // Override with local configs if recording
-if ( process.env['REPLAY'] === 'record') { //eslint-disable-line no-process-env
+if (process.env['REPLAY'] === 'record') { //eslint-disable-line no-process-env
   DFP_CREDS = require('../local/application-creds');
   config = require('../local/config');
 }
@@ -49,15 +49,16 @@ describe('Criteria methods', function() {
     }
     return expect(dfp.getCriteriaValues(conditions))
       .to.eventually.deep.equal(['140750957536']);
-  })
+  });
+
+  it.only('getCriteria should return key and values ids', function() {
+    var conditions = {
+      sbi_mouse: '0.95'
+    };
+    return expect(dfp.getCriteria(conditions))
+      .to.eventually.deep.equal([{
+        keyId: '597016',
+        valueIds: ['140750957536']
+      }]);
+  });
 });
-
-
-// var conditions = {
-//   sbi_mouse: '0.95'
-// };
-
-// dfp.getCriteria(conditions)
-//   .then(function(criteria){
-//     console.log(criteria);
-//   })
