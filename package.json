@@ -4,7 +4,8 @@
   "description": "Simplifies and promisifies calls to node-google-dfp.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests",
+    "lint": "eslint .; exit 0"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,15 @@
   "homepage": "https://github.com/spanishdict/node-google-dfp-wrapper",
   "dependencies": {
     "bluebird": "3.0.5",
-    "eslint": "1.9.0",
     "level": "1.3.0",
     "lodash": "3.10.1",
     "node-google-dfp": "0.2.0"
+  },
+  "devDependencies": {
+    "@spanishdict/replay": "2.1.0",
+    "chai": "3.4.1",
+    "chai-as-promised": "5.1.0",
+    "eslint": "1.9.0",
+    "mocha": "2.3.4"
   }
 }

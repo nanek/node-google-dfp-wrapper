@@ -1,0 +1,6 @@
+{
+ "networkCode": "test_network",
+ "appName": "Line Item Generator",
+ "version": "v201508",
+ "refreshToken": "test_refresh_token"
+}
