@@ -27,7 +27,7 @@
     "node-google-dfp": "0.2.0"
   },
   "devDependencies": {
-    "@spanishdict/replay": "2.1.0",
+    "replay": "git://github.com/spanishdict/node-replay#f012552fe1b373bc74d59750307f0a2d17c91aa9",
     "chai": "3.4.1",
     "chai-as-promised": "5.1.0",
     "eslint": "1.9.0",
