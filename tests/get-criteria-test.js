@@ -43,12 +43,13 @@ describe('Criteria methods', function() {
   });
 
   it('getCriteriaValues should return value ids', function() {
+    this.timeout(10000);
     var conditions = {
       name: '0.95',
       keyId: '597016'
     }
     return expect(dfp.getCriteriaValues(conditions))
-      .to.eventually.deep.equal(['140750957536']);
+      .to.eventually.deep.equal('126109156816');
   });
 
   it('getCriteria should return key and values ids', function() {
@@ -58,7 +59,7 @@ describe('Criteria methods', function() {
     return expect(dfp.getCriteria(conditions))
       .to.eventually.deep.equal([{
         keyId: '597016',
-        valueIds: ['140750957536']
+        valueIds: ['126109156816']
       }]);
   });
 });
