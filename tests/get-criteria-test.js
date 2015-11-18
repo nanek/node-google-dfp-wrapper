@@ -51,7 +51,7 @@ describe('Criteria methods', function() {
       .to.eventually.deep.equal(['140750957536']);
   });
 
-  it.only('getCriteria should return key and values ids', function() {
+  it('getCriteria should return key and values ids', function() {
     var conditions = {
       sbi_mouse: '0.95'
     };
