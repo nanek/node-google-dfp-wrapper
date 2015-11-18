@@ -1,0 +1,30 @@
+POST /o/oauth2/token
+host: accounts.google.com
+content-type: application/x-www-form-urlencoded; charset=utf-8
+accept: application/json
+body: refresh_token=test_refresh_token&client_id=test_id&client_secret=test_secret&grant_type=refresh_token
+
+HTTP/1.1 200 undefined
+content-type: application/json; charset=utf-8
+x-content-type-options: nosniff
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: Fri, 01 Jan 1990 00:00:00 GMT
+date: Tue, 17 Nov 2015 16:25:09 GMT
+content-disposition: attachment; filename="json.txt"; filename*=UTF-8''json.txt
+p3p: CP="This is not a P3P policy! See https://support.google.com/accounts/answer/151657?hl=en for more info."
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+server: GSE
+set-cookie: NID=73=aFXJcYeNXAzrsGQ0uAFiUdpkioT7NQbvRFl4RJNPCHUNUInxHlc81_ul16o10lLJVOHx5GBDpKE7vvn_yM87CTLjN81zHEOFo0Yok9bT2DpoSEJuQPC-5tUa00zji0I3;Domain=.google.com;Path=/;Expires=Wed, 18-May-2016 16:25:09 GMT;HttpOnly
+alternate-protocol: 443:quic,p=1
+alt-svc: quic=":443"; p="1"; ma=604800
+accept-ranges: none
+vary: Accept-Encoding
+transfer-encoding: chunked
+
+{
+  "access_token" : "ya29.LwKhGuAUdqeUx_nRoSFaBXTwbz1kYq52aUq-dgxYE47_WQEN1sglojzjZD0TNudCTD5G",
+  "token_type" : "Bearer",
+  "expires_in" : 3600
+}
