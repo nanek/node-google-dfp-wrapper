@@ -43,10 +43,9 @@ describe('Criteria methods', function() {
   });
 
   it('getCriteriaValues should return value ids', function() {
-    this.timeout(10000);
     var conditions = {
       name: '0.95',
-      keyId: '597016'
+      customTargetingKeyId: '597016'
     }
     return expect(dfp.getCriteriaValues(conditions))
       .to.eventually.deep.equal('126109156816');
@@ -59,7 +58,7 @@ describe('Criteria methods', function() {
     return expect(dfp.getCriteria(conditions))
       .to.eventually.deep.equal([{
         keyId: '597016',
-        valueIds: ['126109156816']
+        valueIds: '126109156816'
       }]);
   });
 });
