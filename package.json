@@ -27,10 +27,10 @@
     "node-google-dfp": "0.2.0"
   },
   "devDependencies": {
+    "@spanishdict/replay": "2.1.0",
     "chai": "3.4.1",
     "chai-as-promised": "5.1.0",
     "eslint": "1.9.0",
-    "mocha": "2.3.4",
-    "replay": "2.0.6"
+    "mocha": "2.3.4"
   }
 }
