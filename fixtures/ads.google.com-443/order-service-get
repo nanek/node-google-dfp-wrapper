@@ -6,13 +6,8 @@ host: ads.google.com
 
 HTTP/1.1 200 undefined
 content-type: text/xml
-<<<<<<< HEAD
-date: Tue, 17 Nov 2015 21:15:59 GMT
-expires: Tue, 17 Nov 2015 21:15:59 GMT
-=======
 date: Tue, 17 Nov 2015 16:32:11 GMT
 expires: Tue, 17 Nov 2015 16:32:11 GMT
->>>>>>> master
 cache-control: private, max-age=0
 x-content-type-options: nosniff
 x-frame-options: SAMEORIGIN
@@ -66,7 +61,7 @@ connection: close
           <documentation>
             The API error base class that provides details about an error that occurred
             while processing a service request.
-            
+
             &lt;p&gt;The OGNL field path is provided for parsers to identify the request data
             element that may have caused the error.&lt;/p&gt;
           </documentation>
@@ -445,7 +440,7 @@ connection: close
                     The value for this field. The appropriate type of {@code Value} is
                     determined by the {@link CustomField#dataType} of the {@code CustomField}
                     that this conforms to.
-                    
+
                     &lt;table&gt;
                     &lt;tr&gt;&lt;th&gt;{@link CustomFieldDataType}&lt;/th&gt;&lt;th&gt;{@link Value} type&lt;/th&gt;&lt;/tr&gt;
                     &lt;tr&gt;&lt;td&gt;{@link CustomFieldDataType#STRING STRING}&lt;/td&gt;&lt;td&gt;{@link TextValue}&lt;/td&gt;&lt;/tr&gt;
@@ -3036,10 +3031,10 @@ connection: close
               <documentation>
                 A rule defined by the cross selling distributor has been violated by a line item targeting
                 a shared ad unit. Violating this rule is a warning.
-                
+
                 &lt;p&gt;By setting {@link LineItem#skipCrossSellingRuleWarningChecks}, the content partner can
                 suppress the warning (and create or save the line item).
-                
+
                 &lt;p&gt;This flag is available beginning in V201411.
               </documentation>
             </annotation>
@@ -6520,7 +6515,7 @@ connection: close
         <annotation>
           <documentation>
             Creates new {@link Order} objects.
-            
+
             @param orders the orders to create
             @return the created orders with their IDs filled in
           </documentation>
@@ -6550,7 +6545,7 @@ connection: close
           <documentation>
             Gets an {@link OrderPage} of {@link Order} objects that satisfy the given
             {@link Statement#query}. The following fields are supported for filtering:
-            
+
             &lt;table&gt;
             &lt;tr&gt;
             &lt;th scope="col"&gt;PQL Property&lt;/th&gt; &lt;th scope="col"&gt;Object Property&lt;/th&gt;
@@ -6592,7 +6587,7 @@ connection: close
             &lt;td&gt;{@link Order#lastModifiedDateTime}&lt;/td&gt;
             &lt;/tr&gt;
             &lt;/table&gt;
-            
+
             @param filterStatement a Publisher Query Language statement used to filter
             a set of orders
             @return the orders that match the given filter
@@ -6616,7 +6611,7 @@ connection: close
           <documentation>
             Performs actions on {@link Order} objects that match the given
             {@link Statement#query}.
-            
+
             @param orderAction the action to perform
             @param filterStatement a Publisher Query Language statement used to filter
             a set of orders
@@ -6641,7 +6636,7 @@ connection: close
         <annotation>
           <documentation>
             Updates the specified {@link Order} objects.
-            
+
             @param orders the orders to update
             @return the updated orders
           </documentation>
@@ -6710,7 +6705,7 @@ connection: close
     <wsdl:operation name="createOrders">
       <wsdl:documentation>
         Creates new {@link Order} objects.
-        
+
         @param orders the orders to create
         @return the created orders with their IDs filled in
       </wsdl:documentation>
@@ -6722,7 +6717,7 @@ connection: close
       <wsdl:documentation>
         Gets an {@link OrderPage} of {@link Order} objects that satisfy the given
         {@link Statement#query}. The following fields are supported for filtering:
-        
+
         &lt;table&gt;
         &lt;tr&gt;
         &lt;th scope="col"&gt;PQL Property&lt;/th&gt; &lt;th scope="col"&gt;Object Property&lt;/th&gt;
@@ -6764,7 +6759,7 @@ connection: close
         &lt;td&gt;{@link Order#lastModifiedDateTime}&lt;/td&gt;
         &lt;/tr&gt;
         &lt;/table&gt;
-        
+
         @param filterStatement a Publisher Query Language statement used to filter
         a set of orders
         @return the orders that match the given filter
@@ -6777,7 +6772,7 @@ connection: close
       <wsdl:documentation>
         Performs actions on {@link Order} objects that match the given
         {@link Statement#query}.
-        
+
         @param orderAction the action to perform
         @param filterStatement a Publisher Query Language statement used to filter
         a set of orders
@@ -6790,7 +6785,7 @@ connection: close
     <wsdl:operation name="updateOrders">
       <wsdl:documentation>
         Updates the specified {@link Order} objects.
-        
+
         @param orders the orders to update
         @return the updated orders
       </wsdl:documentation>
