@@ -6,8 +6,13 @@ host: ads.google.com
 
 HTTP/1.1 200 undefined
 content-type: text/xml
+<<<<<<< HEAD
 date: Tue, 17 Nov 2015 21:15:59 GMT
 expires: Tue, 17 Nov 2015 21:15:59 GMT
+=======
+date: Tue, 17 Nov 2015 16:32:11 GMT
+expires: Tue, 17 Nov 2015 16:32:11 GMT
+>>>>>>> master
 cache-control: private, max-age=0
 x-content-type-options: nosniff
 x-frame-options: SAMEORIGIN
