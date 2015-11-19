@@ -36,7 +36,7 @@ describe('Order Methods', function() {
 
   describe('getOrder', function() {
 
-    it('getOrder should return order id', function() {
+    it('should return order id', function() {
       var conditions = {
         name: 'AMAZON_A_D_CONTENT_USA'
       };
