@@ -34,31 +34,44 @@ describe('Criteria methods', function() {
     dfp = new Dfp(credentials, config, config.refreshToken);
   });
 
-  it('getCriteriaKey should return key id', function() {
-    var conditions = {
-      name: 'sbi_mouse'
-    };
-    return expect(dfp.getCriteriaKey(conditions))
-      .to.eventually.equal('597016');
+  describe('getCriteriaKey', function() {
+
+    it('should return key id', function() {
+      var conditions = {
+        name: 'sbi_mouse'
+      };
+      return expect(dfp.getCriteriaKey(conditions))
+        .to.eventually.equal('597016');
+    });
+
   });
 
-  it('getCriteriaValues should return value ids', function() {
-    var conditions = {
-      name: '0.95',
-      customTargetingKeyId: '597016'
-    }
-    return expect(dfp.getCriteriaValues(conditions))
-      .to.eventually.deep.equal('126109156816');
+  describe('getCriteriaValues', function() {
+
+    it('should return value ids', function() {
+      var conditions = {
+        name: '0.95',
+        customTargetingKeyId: '597016'
+      }
+      return expect(dfp.getCriteriaValues(conditions))
+        .to.eventually.deep.equal('126109156816');
+    });
+
   });
 
-  it('getCriteria should return key and values ids', function() {
-    var conditions = {
-      sbi_mouse: '0.95'
-    };
-    return expect(dfp.getCriteria(conditions))
-      .to.eventually.deep.equal([{
-        keyId: '597016',
-        valueIds: '126109156816'
-      }]);
+  describe('getCriteria', function() {
+
+    it('should return key and values ids', function() {
+      var conditions = {
+        sbi_mouse: '0.95'
+      };
+      return expect(dfp.getCriteria(conditions))
+        .to.eventually.deep.equal([{
+          keyId: '597016',
+          valueIds: '126109156816'
+        }]);
+    });
+
   });
+
 });

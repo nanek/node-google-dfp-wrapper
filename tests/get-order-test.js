@@ -34,12 +34,16 @@ describe('Order Methods', function() {
     dfp = new Dfp(credentials, config, config.refreshToken);
   });
 
-  it('getOrder should return order id', function() {
-    var conditions = {
-      name: 'AMAZON_A_D_CONTENT_USA'
-    };
-    return expect(dfp.getOrder(conditions))
-      .to.eventually.equal('43116000');
+  describe('getOrder', function() {
+
+    it('getOrder should return order id', function() {
+      var conditions = {
+        name: 'AMAZON_A_D_CONTENT_USA'
+      };
+      return expect(dfp.getOrder(conditions))
+        .to.eventually.equal('43116000');
+    });
+
   });
 
 });
