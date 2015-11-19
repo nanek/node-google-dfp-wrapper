@@ -40,6 +40,7 @@ describe('Criteria methods', function() {
       var conditions = {
         name: 'sbi_mouse'
       };
+
       return expect(dfp.getCriteriaKey(conditions))
         .to.eventually.equal('597016');
     });
@@ -52,8 +53,9 @@ describe('Criteria methods', function() {
       var conditions = {
         name: '0.95',
         customTargetingKeyId: '597016'
-      }
-      return expect(dfp.getCriteriaValues(conditions))
+      };
+
+      return expect(dfp.getCriteriaValue(conditions))
         .to.eventually.deep.equal('126109156816');
     });
 
@@ -65,10 +67,11 @@ describe('Criteria methods', function() {
       var conditions = {
         sbi_mouse: '0.95'
       };
+
       return expect(dfp.getCriteria(conditions))
         .to.eventually.deep.equal([{
           keyId: '597016',
-          valueIds: '126109156816'
+          valueIds: ['126109156816']
         }]);
     });
 
