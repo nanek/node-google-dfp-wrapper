@@ -26,7 +26,7 @@ credentials = {
 
 chai.use(chaiAsPromised);
 
-describe('Order Methods', function() {
+describe('Criteria methods', function() {
 
   var dfp;
 
@@ -34,14 +34,45 @@ describe('Order Methods', function() {
     dfp = new Dfp(credentials, config, config.refreshToken);
   });
 
-  describe('getOrder', function() {
+  describe('getCriteriaKey', function() {
 
-    it('should return order id', function() {
+    it('should return key id', function() {
       var conditions = {
-        name: 'AMAZON_A_D_CONTENT_USA'
+        name: 'sbi_mouse'
       };
-      return expect(dfp.getOrder(conditions))
-        .to.eventually.equal('43116000');
+
+      return expect(dfp.getCriteriaKey(conditions))
+        .to.eventually.equal('597016');
+    });
+
+  });
+
+  describe('getCriteriaValues', function() {
+
+    it('should return value ids', function() {
+      var conditions = {
+        name: '0.95',
+        customTargetingKeyId: '597016'
+      };
+
+      return expect(dfp.getCriteriaValue(conditions))
+        .to.eventually.deep.equal('126109156816');
+    });
+
+  });
+
+  describe('getCriteria', function() {
+
+    it('should return key and values ids', function() {
+      var conditions = {
+        sbi_mouse: '0.95'
+      };
+
+      return expect(dfp.getCriteria(conditions))
+        .to.eventually.deep.equal([{
+          keyId: '597016',
+          valueIds: ['126109156816']
+        }]);
     });
 
   });
