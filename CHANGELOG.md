@@ -1,5 +1,11 @@
 # node-google-dfp-wrapper
 
+### 1.2.0
+BREAKING CHANGES
+- Refactor logic for querying DFP for records.
+- Refactor caching and lookup strategy for custom targeting criteria methods.
+- Add methods for querying and creating report jobs.
+
 ### 1.1.0
 - Add methods for querying and updating line-item-creative-associations.
 

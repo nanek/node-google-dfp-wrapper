@@ -1,0 +1,24 @@
+POST /apis/ads/publisher/v201508/ReportService
+accept: text/html,application/xhtml+xml,application/xml,text/xml;q=0.9,*/*;q=0.8
+accept-encoding: none
+accept-charset: utf-8
+host: ads.google.com
+content-type: text/xml; charset=utf-8
+body: <soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  xmlns:tns=\"https://www.google.com/apis/ads/publisher/v201508\" xmlns:jaxb=\"http://java.sun.com/xml/ns/jaxb\"><soap:Header><RequestHeader soapenv:actor=\"http://schemas.xmlsoap.org/soap/actor/next\" soapenv:mustUnderstand=\"0\" xsi:type=\"ns1:SoapRequestHeader\" xmlns:ns1=\"https://www.google.com/apis/ads/publisher/v201508\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"><ns1:networkCode>test_network</ns1:networkCode><ns1:applicationName>Line Item Generator</ns1:applicationName></RequestHeader></soap:Header><soap:Body><getReportDownloadURL xmlns=\"https://www.google.com/apis/ads/publisher/v201508\"><reportJobId>2555563336</reportJobId><exportFormat>CSV_DUMP</exportFormat></getReportDownloadURL></soap:Body></soap:Envelope>
+
+HTTP/1.1 200 undefined
+content-type: text/xml; charset=UTF-8
+date: Thu, 19 Nov 2015 16:47:14 GMT
+expires: Thu, 19 Nov 2015 16:47:14 GMT
+cache-control: private, max-age=0
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+server: GSE
+alternate-protocol: 443:quic,p=1
+alt-svc: quic=":443"; p="1"; ma=604800
+accept-ranges: none
+vary: Accept-Encoding
+connection: close
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Header><ResponseHeader xmlns:ns2="https://www.google.com/apis/ads/publisher/v201508"><ns2:requestId>b8bb1d19302b71930152912f4db63a4a</ns2:requestId><ns2:responseTime>1174</ns2:responseTime></ResponseHeader></soap:Header><soap:Body><getReportDownloadURLResponse xmlns="https://www.google.com/apis/ads/publisher/v201508"><rval>https://storage.googleapis.com/dfp-report-export/c3ecfab2-1f6c-4b61-a7ff-4f9392004554?GoogleAccessId=376921769015-q0sqoemp6u2bu3hopfa7husqdb5dvi8g@developer.gserviceaccount.com&amp;Expires=1447951934&amp;Signature=00E5JjBPW7ZlGSlDwo5mjGEqlEfo7X02Y63Yz9JnQROj6l6RJzULlcFjZc0tieDwdvqUEbeIvTXwJEuBdmU%2B7vWp5hSig0yqN%2BnSp9NtkpYSHpryc5KYAHmDQ%2FNkgKRU7U%2Fd8E6DoyV8BogdyT85ozWkWi51MymKTWKUazxVxI2X3SS7ZJghnGN1tW%2Bn63k2BusdAQr7EPAyQ4sNx1jkXkjFiGQXOuY9f3gcs4jcRizytAfKHoGLDF1sxtn%2FrxaS7EPIxq03BThrCGLqkRoOZIcRp0S2%2Fd%2FFb8wD9pDgdauQh8RKBzubUQ1w9Szbfr49LJlAe3QS72FM6a%2Fc0ZwqLA%3D%3D</rval></getReportDownloadURLResponse></soap:Body></soap:Envelope>

@@ -1,0 +1,24 @@
+{
+  "reportQuery": {
+    "dimensions": ["CUSTOM_CRITERIA", "LINE_ITEM_NAME"],
+    "columns": ["AD_SERVER_IMPRESSIONS",
+      "AD_SERVER_CPM_AND_CPC_REVENUE",
+      "AD_SERVER_WITHOUT_CPD_AVERAGE_ECPM"
+    ],
+    "dimensionAttributes": [],
+    "dateRangeType": "TODAY",
+    "statement": {
+      "query": "WHERE CUSTOM_TARGETING_VALUE_ID in (:id)",
+      "values": [{
+        "key": "id",
+        "value": {
+          "attributes": {
+            "xsi:type": "NumberValue"
+          },
+          "value": 140753973616
+        }
+      }]
+    },
+    "timeZone": "America/New_York"
+  }
+}
