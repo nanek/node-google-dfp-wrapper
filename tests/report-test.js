@@ -54,4 +54,26 @@ describe('Report Methods', function() {
 
   });
 
+  describe('getReportDownloadURL', function() {
+
+    var expectedURL = 'https://storage.googleapis.com/dfp-report-export/';
+    expectedURL += 'c3ecfab2-1f6c-4b61-a7ff-4f9392004554';
+    expectedURL += '?GoogleAccessId=376921769015-q0sqoemp6u2bu3hopfa7hus';
+    expectedURL += 'qdb5dvi8g@developer.gserviceaccount.com&Expires=1447';
+    expectedURL += '951934&Signature=00E5JjBPW7ZlGSlDwo5mjGEqlEfo7X02Y63';
+    expectedURL += 'Yz9JnQROj6l6RJzULlcFjZc0tieDwdvqUEbeIvTXwJEuBdmU%2B7';
+    expectedURL += 'vWp5hSig0yqN%2BnSp9NtkpYSHpryc5KYAHmDQ%2FNkgKRU7U%2F';
+    expectedURL += 'd8E6DoyV8BogdyT85ozWkWi51MymKTWKUazxVxI2X3SS7ZJghnGN';
+    expectedURL += '1tW%2Bn63k2BusdAQr7EPAyQ4sNx1jkXkjFiGQXOuY9f3gcs4jcR';
+    expectedURL += 'izytAfKHoGLDF1sxtn%2FrxaS7EPIxq03BThrCGLqkRoOZIcRp0S';
+    expectedURL += '2%2Fd%2FFb8wD9pDgdauQh8RKBzubUQ1w9Szbfr49LJlAe3QS72F';
+    expectedURL += 'M6a%2Fc0ZwqLA%3D%3D';
+
+    it('should return url', function() {
+      return expect(dfp.getReportDownloadURL('2555563336', 'CSV_DUMP'))
+        .to.eventually.equal(expectedURL);
+    });
+
+  });
+
 });
