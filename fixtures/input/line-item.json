@@ -2,17 +2,7 @@
   "orderId": null,
   "name": "TEST_LINE_ITEM",
   "externalId": {},
-  "startDateTime": {
-    "date": {
-      "year": "2015",
-      "month": "12",
-      "day": "11"
-    },
-    "hour": 10,
-    "minute": 26,
-    "second": "0",
-    "timeZoneID": "America/New_York"
-  },
+  "startDateTime": null,
   "startDateTimeType": "USE_START_DATE_TIME",
   "autoExtensionDays": "0",
   "unlimitedEndDateTime": "true",
