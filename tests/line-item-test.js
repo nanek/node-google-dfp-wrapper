@@ -58,6 +58,12 @@ describe('Line Item Methods', function() {
         .to.eventually.have.property('orderId', '421781056');
     });
 
+    it('should add start date', function(){
+      return expect(dfp.prepareLineItem(lineItem))
+        .to.eventually.have.property('startDateTime')
+        .and.to.not.eql(null);
+    });
+
     it('should lookup adunit', function() {
       var adUnitId = 'targeting.inventoryTargeting.targetedAdUnits[0].adUnitId';
       return expect(dfp.prepareLineItem(lineItem))
