@@ -58,12 +58,12 @@ describe('Line Item Methods', function() {
         .to.eventually.have.property('orderId', '421781056');
     });
 
-    it('should remove passed in order name', function(){
+    it('should remove passed in order name', function() {
       return expect(dfp.prepareLineItem(lineItem))
         .to.eventually.not.have.property('orderName');
     });
 
-    it('should add start date', function(){
+    it('should add start date', function() {
       return expect(dfp.prepareLineItem(lineItem))
         .to.eventually.have.deep.property('startDateTime.date')
         .and.to.eql({
@@ -73,7 +73,7 @@ describe('Line Item Methods', function() {
         });
     });
 
-    it('should remove passed in date', function(){
+    it('should remove passed in date', function() {
       return expect(dfp.prepareLineItem(lineItem))
         .to.eventually.not.have.property('date');
     });
@@ -84,26 +84,29 @@ describe('Line Item Methods', function() {
         .to.eventually.have.deep.property(adUnitId, '124991056');
     });
 
-    it('should remove passed in ad unit name', function(){
+    it('should remove passed in ad unit name', function() {
       return expect(dfp.prepareLineItem(lineItem))
         .to.eventually.not.have.property('adUnitName');
     });
 
-    it('should lookup criteria', function() {
-      var criteria      = 'targeting.customTargeting.children[0].children';
-      var criteriaKey   = criteria + '[0].keyId';
-      var criteriaValue = criteria + '[0].valueIds';
+    it('should lookup criteria key', function() {
+      var criteria = 'targeting.customTargeting.children[0].children';
+      var criteriaKey = criteria + '[0].keyId';
 
-      return Bluebird.all([
-        expect(dfp.prepareLineItem(lineItem))
-          .to.eventually.have.deep.property(criteriaKey, '597016'),
-        expect(dfp.prepareLineItem(lineItem))
-          .to.eventually.have.deep.property(criteriaValue)
-          .and.to.eql(['126109156816'])
-      ]);
+      return expect(dfp.prepareLineItem(lineItem))
+        .to.eventually.have.deep.property(criteriaKey, '597016');
     });
 
-    it('should remove passed in criteria', function(){
+    it('should lookup criteria key', function() {
+      var criteria = 'targeting.customTargeting.children[0].children';
+      var criteriaValue = criteria + '[0].valueIds';
+
+      return expect(dfp.prepareLineItem(lineItem))
+        .to.eventually.have.deep.property(criteriaValue)
+        .and.to.eql(['126109156816']);
+    });
+
+    it('should remove passed in criteria', function() {
       return expect(dfp.prepareLineItem(lineItem))
         .to.eventually.not.have.property('customCriteriaKVPairs');
     });
