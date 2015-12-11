@@ -58,6 +58,11 @@ describe('Line Item Methods', function() {
         .to.eventually.have.property('orderId', '421781056');
     });
 
+    it('should remove passed in order name', function(){
+      return expect(dfp.prepareLineItem(lineItem))
+        .to.eventually.not.have.property('orderName');
+    });
+
     it('should add start date', function(){
       return expect(dfp.prepareLineItem(lineItem))
         .to.eventually.have.deep.property('startDateTime.date')
@@ -68,10 +73,20 @@ describe('Line Item Methods', function() {
         });
     });
 
+    it('should remove passed in date', function(){
+      return expect(dfp.prepareLineItem(lineItem))
+        .to.eventually.not.have.property('date');
+    });
+
     it('should lookup adunit', function() {
       var adUnitId = 'targeting.inventoryTargeting.targetedAdUnits[0].adUnitId';
       return expect(dfp.prepareLineItem(lineItem))
         .to.eventually.have.deep.property(adUnitId, '124991056');
+    });
+
+    it('should remove passed in ad unit name', function(){
+      return expect(dfp.prepareLineItem(lineItem))
+        .to.eventually.not.have.property('adUnitName');
     });
 
     it('should lookup criteria', function() {
@@ -86,6 +101,11 @@ describe('Line Item Methods', function() {
           .to.eventually.have.deep.property(criteriaValue)
           .and.to.eql(['126109156816'])
       ]);
+    });
+
+    it('should remove passed in criteria', function(){
+      return expect(dfp.prepareLineItem(lineItem))
+        .to.eventually.not.have.property('customCriteriaKVPairs');
     });
 
   });
