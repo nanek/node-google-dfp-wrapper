@@ -60,8 +60,12 @@ describe('Line Item Methods', function() {
 
     it('should add start date', function(){
       return expect(dfp.prepareLineItem(lineItem))
-        .to.eventually.have.property('startDateTime')
-        .and.to.not.eql(null);
+        .to.eventually.have.deep.property('startDateTime.date')
+        .and.to.eql({
+          year: '2115',
+          month: '12',
+          day: '11',
+        });
     });
 
     it('should lookup adunit', function() {
