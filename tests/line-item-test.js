@@ -3,14 +3,17 @@
 'use strict';
 
 var Replay = require('replay'); //eslint-disable-line no-unused-vars
-var chai = require("chai");
-var chaiAsPromised = require("chai-as-promised");
+var chai = require('chai');
+var Bluebird = require('Bluebird');
+var chaiAsPromised = require('chai-as-promised');
 var expect = chai.expect;
 
 var Dfp = require('../index');
 var DFP_CREDS = require('../fixtures/setup/application-creds');
 var config = require('../fixtures/setup/config');
 var credentials;
+
+var lineItem = require('../fixtures/input/line-item');
 
 // Override with local configs if recording
 if (process.env['REPLAY'] === 'record') { //eslint-disable-line no-process-env
@@ -44,6 +47,35 @@ describe('Line Item Methods', function() {
       return expect(dfp.getLineItems(conditions))
         .to.eventually.be.instanceof(Array)
         .and.to.have.deep.property('[0].id', '912580336');
+    });
+
+  });
+
+  describe('prepareLineItem', function() {
+
+    it('should lookup order', function() {
+      return expect(dfp.prepareLineItem(lineItem))
+        .to.eventually.have.property('orderId', '421781056');
+    });
+
+    it('should lookup adunit', function() {
+      var adUnitId = 'targeting.inventoryTargeting.targetedAdUnits[0].adUnitId';
+      return expect(dfp.prepareLineItem(lineItem))
+        .to.eventually.have.deep.property(adUnitId, '124991056');
+    });
+
+    it('should lookup criteria', function() {
+      var criteria      = 'targeting.customTargeting.children[0].children';
+      var criteriaKey   = criteria + '[0].keyId';
+      var criteriaValue = criteria + '[0].valueIds';
+
+      return Bluebird.all([
+        expect(dfp.prepareLineItem(lineItem))
+          .to.eventually.have.deep.property(criteriaKey, '597016'),
+        expect(dfp.prepareLineItem(lineItem))
+          .to.eventually.have.deep.property(criteriaValue)
+          .and.to.eql(['126109156816'])
+      ]);
     });
 
   });

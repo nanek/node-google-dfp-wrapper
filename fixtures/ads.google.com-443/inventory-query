@@ -1,0 +1,24 @@
+POST /apis/ads/publisher/v201508/InventoryService
+accept: text/html,application/xhtml+xml,application/xml,text/xml;q=0.9,*/*;q=0.8
+accept-encoding: none
+accept-charset: utf-8
+host: ads.google.com
+content-type: text/xml; charset=utf-8
+body: <soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  xmlns:tns=\"https://www.google.com/apis/ads/publisher/v201508\" xmlns:jaxb=\"http://java.sun.com/xml/ns/jaxb\"><soap:Header><RequestHeader soapenv:actor=\"http://schemas.xmlsoap.org/soap/actor/next\" soapenv:mustUnderstand=\"0\" xsi:type=\"ns1:SoapRequestHeader\" xmlns:ns1=\"https://www.google.com/apis/ads/publisher/v201508\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"><ns1:networkCode>test_network</ns1:networkCode><ns1:applicationName>Line Item Generator</ns1:applicationName></RequestHeader></soap:Header><soap:Body><getAdUnitsByStatement xmlns=\"https://www.google.com/apis/ads/publisher/v201508\"><filterStatement><query>Where name like &apos;SD_MOBILE_MIDDLE&apos;</query></filterStatement></getAdUnitsByStatement></soap:Body></soap:Envelope>
+
+HTTP/1.1 200 undefined
+content-type: text/xml; charset=UTF-8
+date: Fri, 11 Dec 2015 18:09:25 GMT
+expires: Fri, 11 Dec 2015 18:09:25 GMT
+cache-control: private, max-age=0
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+server: GSE
+alternate-protocol: 443:quic,p=0
+alt-svc: clear
+accept-ranges: none
+vary: Accept-Encoding
+connection: close
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Header><ResponseHeader xmlns:ns2="https://www.google.com/apis/ads/publisher/v201508"><ns2:requestId>c56e9bac47bcda1876d078d074dd7886</ns2:requestId><ns2:responseTime>147</ns2:responseTime></ResponseHeader></soap:Header><soap:Body><getAdUnitsByStatementResponse xmlns="https://www.google.com/apis/ads/publisher/v201508"><rval><totalResultSetSize>1</totalResultSetSize><startIndex>0</startIndex><results><id>124991056</id><parentId>245626</parentId><hasChildren>false</hasChildren><parentPath><id>245626</id><name>ca-pub-7876075054123551</name><adUnitCode>ca-pub-7876075054123551</adUnitCode></parentPath><name>SD_MOBILE_MIDDLE</name><description>A high-click ad placement placed in the center of our mobile content (above SD_MOBILE_CONTENT)</description><targetWindow>TOP</targetWindow><status>ACTIVE</status><adUnitCode>SD_MOBILE_MIDDLE</adUnitCode><adUnitSizes><size><width>300</width><height>250</height><isAspectRatio>false</isAspectRatio></size><environmentType>BROWSER</environmentType><fullDisplayString>300x250</fullDisplayString></adUnitSizes><targetPlatform>WEB</targetPlatform><mobilePlatform>SITE</mobilePlatform><explicitlyTargeted>false</explicitlyTargeted><inheritedAdSenseSettings><value><adSenseEnabled>true</adSenseEnabled><borderColor>FFFFFF</borderColor><titleColor>2d6fac</titleColor><backgroundColor>FFFFFF</backgroundColor><textColor>333333</textColor><urlColor>1278C2</urlColor><adType>TEXT_AND_IMAGE</adType><borderStyle>SLIGHTLY_ROUNDED</borderStyle><fontFamily>ARIAL</fontFamily><fontSize>DEFAULT</fontSize></value></inheritedAdSenseSettings><lastModifiedDateTime><date><year>2015</year><month>9</month><day>21</day></date><hour>15</hour><minute>33</minute><second>42</second><timeZoneID>PST8PDT</timeZoneID></lastModifiedDateTime><smartSizeMode>NONE</smartSizeMode><isSharedByDistributor>false</isSharedByDistributor><isSetTopBoxEnabled>false</isSetTopBoxEnabled></results></rval></getAdUnitsByStatementResponse></soap:Body></soap:Envelope>

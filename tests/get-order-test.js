@@ -38,10 +38,10 @@ describe('Order Methods', function() {
 
     it('should return order id', function() {
       var conditions = {
-        name: 'AMAZON_A_D_CONTENT_USA'
+        name: 'TEST_ORDER1'
       };
       return expect(dfp.getOrder(conditions))
-        .to.eventually.equal('43116000');
+        .to.eventually.equal('421781056');
     });
 
   });
