@@ -113,18 +113,18 @@ describe('Line Item Methods', function() {
 
   });
 
-  describe('createLineItems', function(){
+  describe('createLineItems', function() {
 
-    it('should successfully make line item', function(){
-      var prepareLineItem = function(lineItem){
-        return dfp.prepareLineItem(lineItem);
+    it('should successfully make line item', function() {
+      var prepareLineItem = function(input) {
+        return dfp.prepareLineItem(input);
       };
 
-      var createLineItems = function(preparedLineItem){
+      var createLineItems = function(preparedLineItem) {
         return dfp.createLineItems([preparedLineItem]);
       };
 
-      var checkCreated = function(results){
+      var checkCreated = function(results) {
         return expect(results).to.have.deep.property('[0].id')
           .and.to.eql('1058773456');
       };
@@ -134,7 +134,7 @@ describe('Line Item Methods', function() {
         .then(prepareLineItem)
         .then(createLineItems)
         .then(checkCreated);
-    })
+    });
   });
 
 });
