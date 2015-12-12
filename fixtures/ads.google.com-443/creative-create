@@ -1,0 +1,24 @@
+POST /apis/ads/publisher/v201508/CreativeService
+accept: text/html,application/xhtml+xml,application/xml,text/xml;q=0.9,*/*;q=0.8
+accept-encoding: none
+accept-charset: utf-8
+host: ads.google.com
+content-type: text/xml; charset=utf-8
+body: <soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  xmlns:tns=\"https://www.google.com/apis/ads/publisher/v201508\" xmlns:jaxb=\"http://java.sun.com/xml/ns/jaxb\"><soap:Header><RequestHeader soapenv:actor=\"http://schemas.xmlsoap.org/soap/actor/next\" soapenv:mustUnderstand=\"0\" xsi:type=\"ns1:SoapRequestHeader\" xmlns:ns1=\"https://www.google.com/apis/ads/publisher/v201508\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"><ns1:networkCode>test_network</ns1:networkCode><ns1:applicationName>Line Item Generator</ns1:applicationName></RequestHeader></soap:Header><soap:Body><createCreatives xmlns=\"https://www.google.com/apis/ads/publisher/v201508\"><creatives xsi:type=\"ThirdPartyCreative\"><advertiserId>565625056</advertiserId><name>TEST_CREATIVE</name><size><width>320</width><height>250</height><isAspectRatio>false</isAspectRatio></size><snippet>&lt;!-- Example snippet --&gt;</snippet></creatives></createCreatives></soap:Body></soap:Envelope>
+
+HTTP/1.1 200 undefined
+content-type: text/xml; charset=UTF-8
+date: Sat, 12 Dec 2015 21:49:32 GMT
+expires: Sat, 12 Dec 2015 21:49:32 GMT
+cache-control: private, max-age=0
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+server: GSE
+alternate-protocol: 443:quic,p=0
+alt-svc: clear
+accept-ranges: none
+vary: Accept-Encoding
+connection: close
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Header><ResponseHeader xmlns:ns2="https://www.google.com/apis/ads/publisher/v201508"><ns2:requestId>7543c5468f3abaadc385a02777a7840a</ns2:requestId><ns2:responseTime>448</ns2:responseTime></ResponseHeader></soap:Header><soap:Body><createCreativesResponse xmlns="https://www.google.com/apis/ads/publisher/v201508"><rval xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ThirdPartyCreative"><advertiserId>565625056</advertiserId><id>99831187816</id><name>TEST_CREATIVE</name><size><width>320</width><height>250</height><isAspectRatio>false</isAspectRatio></size><previewUrl>http://partner.googleadservices.com/gampad/ads?gct=fKDA_ezmYt0KWfgMAYoYUypRCAkQFkoAWICAgKCzlOyppAG4AeiSnPPzAtICCXRleHQvaHRtbPACwAL4AvoBkAMByAPAAtAD-gHwAwLKBQ4vcGFnZWFkL2ltZy8uLvoGAigAGOussrMFKAAw68jnugU4AFgBagZfYmxhbmtw66yyswU&amp;iu=1027916&amp;gdfp_req=1&amp;height=250&amp;width=320&amp;impl=ifr</previewUrl><lastModifiedDateTime><date><year>2015</year><month>12</month><day>12</day></date><hour>13</hour><minute>49</minute><second>31</second><timeZoneID>PST8PDT</timeZoneID></lastModifiedDateTime><snippet>&lt;!-- Example snippet --&gt;</snippet><expandedSnippet>&lt;!-- Example snippet --&gt;</expandedSnippet><sslScanResult>UNSCANNED</sslScanResult><sslManualOverride>NO_OVERRIDE</sslManualOverride><lockedOrientation>FREE_ORIENTATION</lockedOrientation></rval></createCreativesResponse></soap:Body></soap:Envelope>
