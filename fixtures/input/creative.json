@@ -1,0 +1,14 @@
+{
+  "attributes": {
+    "xsi:type": "ThirdPartyCreative"
+  },
+  "advertiserId": null,
+  "name": "TEST_CREATIVE",
+  "size": {
+    "width": "320",
+    "height": "250",
+    "isAspectRatio": false
+  },
+  "snippet": "<!-- Example snippet -->",
+  "partner": "Sonobi"
+}
