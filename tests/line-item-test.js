@@ -67,7 +67,7 @@ describe('Line Item Methods', function() {
       return expect(dfp.prepareLineItem(lineItem))
         .to.eventually.have.deep.property('startDateTime.date')
         .and.to.eql({
-          year: '2115',
+          year: '2025',
           month: '12',
           day: '11',
         });
@@ -111,6 +111,30 @@ describe('Line Item Methods', function() {
         .to.eventually.not.have.property('customCriteriaKVPairs');
     });
 
+  });
+
+  describe('createLineItems', function(){
+
+    it('should successfully make line item', function(){
+      var prepareLineItem = function(lineItem){
+        return dfp.prepareLineItem(lineItem);
+      };
+
+      var createLineItems = function(preparedLineItem){
+        return dfp.createLineItems([preparedLineItem]);
+      };
+
+      var checkCreated = function(results){
+        return expect(results).to.have.deep.property('[0].id')
+          .and.to.eql('1058773456');
+      };
+
+      return Bluebird.resolve(lineItem)
+        .bind(this)
+        .then(prepareLineItem)
+        .then(createLineItems)
+        .then(checkCreated);
+    })
   });
 
 });
