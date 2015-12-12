@@ -26,7 +26,7 @@ credentials = {
 
 chai.use(chaiAsPromised);
 
-describe('Order Methods', function() {
+describe('Ad Unit Methods', function() {
 
   var dfp;
 
@@ -34,14 +34,14 @@ describe('Order Methods', function() {
     dfp = new Dfp(credentials, config, config.refreshToken);
   });
 
-  describe('getOrder', function() {
+  describe('getAdUnit', function() {
 
-    it('should return order id', function() {
+    it('should return ad unit id', function() {
       var conditions = {
-        name: 'TEST_ORDER1'
+        name: 'SD_MOBILE_MIDDLE'
       };
-      return expect(dfp.getOrder(conditions))
-        .to.eventually.equal('421781056');
+      return expect(dfp.getAdUnit(conditions))
+        .to.eventually.equal('124991056');
     });
 
   });

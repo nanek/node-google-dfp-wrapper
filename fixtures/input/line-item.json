@@ -1,0 +1,94 @@
+{
+  "orderId": null,
+  "name": "TEST_LINE_ITEM",
+  "externalId": {},
+  "startDateTime": null,
+  "startDateTimeType": "USE_START_DATE_TIME",
+  "autoExtensionDays": "0",
+  "unlimitedEndDateTime": "true",
+  "creativeRotationType": "OPTIMIZED",
+  "deliveryRateType": "EVENLY",
+  "roadblockingType": "ONE_OR_MORE",
+  "lineItemType": "PRICE_PRIORITY",
+  "priority": "12",
+  "costPerUnit": {
+    "currencyCode": "USD",
+    "microAmount": "10500000"
+  },
+  "valueCostPerUnit": {
+    "currencyCode": "USD",
+    "microAmount": "0"
+  },
+  "costType": "CPM",
+  "discountType": "PERCENTAGE",
+  "discount": "0.0",
+  "contractedUnitsBought": "0",
+  "creativePlaceholders": {
+    "size": {
+      "width": "300",
+      "height": "250",
+      "isAspectRatio": "false"
+    },
+    "expectedCreativeCount": "1",
+    "creativeSizeType": "PIXEL"
+  },
+  "environmentType": "BROWSER",
+  "companionDeliveryOption": "UNKNOWN",
+  "creativePersistenceType": "NOT_PERSISTENT",
+  "allowOverbook": "false",
+  "skipInventoryCheck": "false",
+  "skipCrossSellingRuleWarningChecks": "false",
+  "reserveAtCreation": "false",
+  "stats": {
+    "impressionsDelivered": "0",
+    "clicksDelivered": "0",
+    "videoCompletionsDelivered": "0",
+    "videoStartsDelivered": "0"
+  },
+  "deliveryData": {},
+  "budget": {
+    "currencyCode": "USD",
+    "microAmount": "0"
+  },
+  "status": "PAUSED",
+  "reservationStatus": "UNRESERVED",
+  "isArchived": "false",
+  "webPropertyCode": {},
+  "disableSameAdvertiserCompetitiveExclusion": "false",
+  "lastModifiedByApp": "Goog_DFPUI",
+  "lastModifiedDateTime": {},
+  "creationDateTime": {},
+  "isPrioritizedPreferredDealsEnabled": "false",
+  "adExchangeAuctionOpeningPriority": "0",
+  "isSetTopBoxEnabled": "false",
+  "isMissingCreatives": "false",
+  "primaryGoal": {
+    "goalType": "NONE",
+    "unitType": "IMPRESSIONS",
+    "units": "-1"
+  },
+  "targeting": {
+    "geoTargeting": {
+      "targetedLocations": [null]
+    },
+    "inventoryTargeting": {
+      "targetedAdUnits": []
+    },
+    "customTargeting": {
+      "logicalOperator": "OR",
+      "children": [{
+        "attributes": {
+          "xsi:type": "CustomCriteriaSet"
+        },
+        "logicalOperator": "AND",
+        "children": []
+      }]
+    }
+  },
+  "customCriteriaKVPairs": {
+    "sbi_mouse": "0.95"
+  },
+  "adUnitName": "SD_MOBILE_MIDDLE",
+  "orderName": "TEST_ORDER1",
+  "date": "12-11-2025, 18:10:53"
+}
