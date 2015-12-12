@@ -1,0 +1,11 @@
+{
+  "name": "TEST_ORDER_LG",
+  "unlimitedEndDateTime": true,
+  "status": "DRAFT",
+  "currencyCode": "USD",
+  "advertiserId": null,
+  "traffickerId": "142204336",
+  "appliedLabels": null,
+  "isProgrammatic": false,
+  "partner": "Sonobi"
+}

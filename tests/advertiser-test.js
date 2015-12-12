@@ -26,7 +26,7 @@ credentials = {
 
 chai.use(chaiAsPromised);
 
-describe('Order Methods', function() {
+describe('Advertiser Methods', function() {
 
   var dfp;
 
@@ -34,14 +34,14 @@ describe('Order Methods', function() {
     dfp = new Dfp(credentials, config, config.refreshToken);
   });
 
-  describe('getOrder', function() {
+  describe('getAdvertiser', function() {
 
-    it('should return order id', function() {
+    it('should return advertiser id', function() {
       var conditions = {
-        name: 'TEST_ORDER1'
+        name: 'Sonobi'
       };
-      return expect(dfp.getOrder(conditions))
-        .to.eventually.equal('421781056');
+      return expect(dfp.getAdvertiser(conditions))
+        .to.eventually.equal('565625056');
     });
 
   });
