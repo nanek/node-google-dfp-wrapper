@@ -34,7 +34,7 @@ describe('Label Methods', function() {
     dfp = new Dfp(credentials, config, config.refreshToken);
   });
 
-  describe.only('getLabel', function() {
+  describe('lookupLabel', function() {
 
     it('should return label id', function() {
       var conditions = {
