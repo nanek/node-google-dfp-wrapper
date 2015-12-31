@@ -14,10 +14,10 @@ var oauth2Client = new OAuth2(
 );
 
 var url = oauth2Client.generateAuthUrl({
-   access_type: 'offline',
-   scope: [
-     'https://www.googleapis.com/auth/dfp'
-   ]
+  access_type: 'offline',
+  scope: [
+    'https://www.googleapis.com/auth/dfp'
+  ]
 });
 
 console.log('Go to: %s', url);
