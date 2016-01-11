@@ -13,8 +13,6 @@ var DFP_CREDS = require('../fixtures/setup/application-creds');
 var config = require('../fixtures/setup/config');
 var credentials;
 
-var creative = require('../fixtures/input/creative');
-
 // Override with local configs if recording
 if (process.env['REPLAY'] === 'record') { //eslint-disable-line no-process-env
   DFP_CREDS = require('../local/application-creds');
@@ -40,7 +38,6 @@ describe('Association Methods', function() {
   describe('getAssociations', function() {
 
     it('should return association for line item', function() {
-      this.timeout(10000)
       var conditions = {
         lineItemId: '947887696',
         creativeId: '88079283856'
