@@ -1,7 +1,7 @@
 ### Getting started
 
 ```bash
-$ npm install @spanishdict/node-google-dfp-wrapper
+$ npm install node-google-dfp-wrapper
 ```
 
 ```javascript
@@ -35,50 +35,51 @@ These values are created by you, except for `refreshToken`. If you do not have o
 }
 ```
 
+To obtain your network code from DFP. It can be found in your url after you log in to DFP. For example in `https://www.google.com/dfp/1027916#delivery`, the network code is 1027916.
+
 #### Obtain refresh token
 
-1. Obtain your network code from DFP. It can be found in your url after you log
-   in to DFP. For example in `https://www.google.com/dfp/1027916#delivery`,
-   the network code is 1027916.
-2. Run:
+1. Run:
 
-    ```
-    $ cd node_modules/node-google-dfp-wrapper/
-    $ node generate-authentication-url.js
-    ```
+  ```
+  $ cd node_modules/node-google-dfp-wrapper/
+  $ node generate-authentication-url.js
+  ```
 
 Go to the url and give authorization. Copy the auth code.
 
-3. Run the script in "auth code" mode:
+2. Run the script in "auth code" mode:
 
-   ```
-   $ node generate-refresh-token.js --networkCode <network code> --authCode <auth code>
-   ```
+  ```
+  $ node generate-refresh-token.js --authCode <auth code>
+  ```
 
 This will output a refresh token.
 
 #### DFP project authorization
 
-Log into Google.
-
-Go to <https://console.developers.google.com/project>. Make a project for your app and then go to <https://console.developers.google.com/project/your-app/apiui/credential>.
-
-Click Download JSON. Save the file as `local/application-creds.json`. It should look like:
+1. Log into Google.
+2. Go to <https://console.developers.google.com/project>.
+3. Make a project for your app.
+4. Go to <https://console.developers.google.com/apis/credentials?project=<your-project-name>.
+5. Click on `New Credentials` and then on `OAuth client ID`
+6. Click on `Configure consent screen` and give your project a name.
+7. Under `Application type` select `Other` and give your client a name.
+8. You should now see a new entry under `OAuth 2.0 client IDs` and a download icon to the far right. Click that icon to download your cerdentials. Save the file as `local/application-creds.json`. It should look like this, (though you may have to format it):
 
 ```JSON
 {
   "installed": {
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
     "client_id": "<client id>",
-    "client_x509_cert_url": "",
+    "project_id": "<project id>",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth"
+    "token_uri": "https://accounts.google.com/o/oauth2/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "<client secret>",
     "redirect_uris": [
       "urn:ietf:wg:oauth:2.0:oob",
       "oob"
     ],
-    "client_email": "",
-    "token_uri": "https://accounts.google.com/o/oauth2/token",
-    "client_secret": "<client secret>",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth"
   }
 }
 ```
