@@ -1,3 +1,7 @@
+# node-google-dfp-wrapper
+
+This project is a wrapper around [node-google-dfp](https://github.com/ShinyAds/node-google-dfp) aimed at facilitating repeated interactions with the DFP API in a script.
+
 ### Getting started
 
 ```bash
@@ -17,8 +21,11 @@ var credentials = require('../local/application-creds');
 var refreshToken = config.refreshToken;
 
 var dfp = new Dfp(credentials, config, refreshToken);
-
 ```
+
+### How to use
+
+For examples of how to use this library, please refer to https://github.com/spanishdict/example-dfp-line-item-generator
 
 ### One-time setup
 
