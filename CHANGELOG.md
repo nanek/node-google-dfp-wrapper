@@ -1,5 +1,8 @@
 # node-google-dfp-wrapper
 
+### 1.2.1
+- Updated node-google-dfp to 0.2.1
+
 ### 1.2.0
 BREAKING CHANGES
 - Refactor logic for querying DFP for records.

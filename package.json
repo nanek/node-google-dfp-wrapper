@@ -27,7 +27,7 @@
     "lodash": "3.10.1",
     "minimist": "1.2.0",
     "moment": "2.10.6",
-    "node-google-dfp": "0.2.0"
+    "node-google-dfp": "0.2.1"
   },
   "devDependencies": {
     "replay": "git://github.com/spanishdict/node-replay#f012552fe1b373bc74d59750307f0a2d17c91aa9",
