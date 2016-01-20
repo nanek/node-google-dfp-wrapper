@@ -15,7 +15,7 @@
     "dfp"
   ],
   "author": "Juan Caicedo",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/spanishdict/node-google-dfp-wrapper/issues"
   },
