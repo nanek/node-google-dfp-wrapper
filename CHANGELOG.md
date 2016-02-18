@@ -1,5 +1,10 @@
 # node-google-dfp-wrapper
 
+### 1.3.0
+- Adds `getCriteriaValues` for querying criteria values without extracting id.
+- Adds `getCriteriaValueId` for querying criteria values and extracting id.
+- Deprecates `getCriteriaValue` for querying criteria values and extracting id.
+
 ### 1.2.1
 - Updated node-google-dfp to 0.2.1
 
