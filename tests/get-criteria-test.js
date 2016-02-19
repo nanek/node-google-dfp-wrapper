@@ -47,6 +47,34 @@ describe('Criteria methods', function() {
 
   });
 
+  describe('getCriteriaValueId', function() {
+
+    it('should return value ids', function() {
+      var conditions = {
+        name: '0.95',
+        customTargetingKeyId: '597016'
+      };
+
+      return expect(dfp.getCriteriaValueId(conditions))
+        .to.eventually.deep.equal('126109156816');
+    });
+
+  });
+
+  describe('DEPRECATED: getCriteriaValue', function() {
+
+    it('should return value id the same as getCriteriaValueId', function() {
+      var conditions = {
+        name: '0.95',
+        customTargetingKeyId: '597016'
+      };
+
+      return expect(dfp.getCriteriaValue(conditions))
+        .to.eventually.deep.equal('126109156816');
+    });
+
+  });
+
   describe('getCriteriaValues', function() {
 
     it('should return value ids', function() {
@@ -55,8 +83,16 @@ describe('Criteria methods', function() {
         customTargetingKeyId: '597016'
       };
 
-      return expect(dfp.getCriteriaValue(conditions))
-        .to.eventually.deep.equal('126109156816');
+
+      return expect(dfp.getCriteriaValues(conditions))
+        .to.eventually.deep.equal([{
+          customTargetingKeyId: "597016",
+          displayName: "",
+          id: "126109156816",
+          matchType: "EXACT",
+          name: "0.95",
+          status: "ACTIVE"
+        }]);
     });
 
   });
