@@ -61,7 +61,7 @@ describe('Criteria methods', function() {
 
   });
 
-  describe('getCriteriaValue', function() {
+  describe('DEPRECATED: getCriteriaValue', function() {
 
     it('should return value id the same as getCriteriaValueId', function() {
       var conditions = {
