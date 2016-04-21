@@ -31,22 +31,26 @@ For examples of how to use this library, please refer to https://github.com/span
 
 #### Configuration
 
-These values are created by you, except for `refreshToken`. If you do not have one, follow the directions below.
+These values are created by you, except for `refreshToken`. If you do not have one, follow the [directions below](#obtain-refresh-token). Save the file as `local/config.json`.
 
 ```JSON
 {
  "networkCode": "<network code>",
  "appName": "<Name of your app>",
- "version": "<version number>",
+ "version": "<dfp api version number>",
  "refreshToken": "<refresh token>"
 }
 ```
 
 To obtain your network code from DFP. It can be found in your url after you log in to DFP. For example in `https://www.google.com/dfp/1027916#delivery`, the network code is 1027916.
 
+`version` is DFP API version. For example `v201508`.
+
 #### Obtain refresh token
 
-1. Run:
+1. Prepare DFP project authorization (`local/application-creds.json`). If you do not have one, follow the [directions below](#dfp-project-authorization).
+
+2. Run:
 
   ```
   $ cd node_modules/node-google-dfp-wrapper/
@@ -55,7 +59,7 @@ To obtain your network code from DFP. It can be found in your url after you log 
 
 Go to the url and give authorization. Copy the auth code.
 
-2. Run the script in "auth code" mode:
+3. Run the script in "auth code" mode:
 
   ```
   $ node generate-refresh-token.js --authCode <auth code>
