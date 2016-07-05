@@ -3,7 +3,9 @@
 // Generate authentication url.
 
 var google = require('googleapis');
-var DFP_CREDS = require('./local/application-creds');
+var argv = require('minimist')(process.argv.slice(2));
+var config = argv.config || './local/application-creds';
+var DFP_CREDS = require(config);
 
 var OAuth2 = google.auth.OAuth2;
 

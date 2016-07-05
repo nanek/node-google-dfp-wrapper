@@ -4,7 +4,8 @@ var google = require('googleapis');
 var Bluebird = require('bluebird');
 var OAuth2 = google.auth.OAuth2;
 var argv = require('minimist')(process.argv.slice(2));
-var DFP_CREDS = require('./local/application-creds');
+var config = argv.config || './local/application-creds';
+var DFP_CREDS = require(config);
 
 // Constants and arguments.
 var AUTH_CODE = argv.authCode;
