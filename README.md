@@ -48,7 +48,7 @@ To obtain your network code from DFP. It can be found in your url after you log 
 
 1. Run:
 
-  ```
+  ```bash
   $ cd node_modules/node-google-dfp-wrapper/
   $ node generate-authentication-url.js
   ```
@@ -57,17 +57,17 @@ Go to the url and give authorization. Copy the auth code.
 
 2. Run the script in "auth code" mode:
 
-  ```
+  ```bash
   $ node generate-refresh-token.js --authCode <auth code>
   ```
-  
+
   If you are using this package as a dependency and local/application-creds lives in your project you can pass the config path as an arguments as follow:
-  
+
+  ```bash
+  $ node node_modules/node-google-dfp-wrapper/generate-authentication-url.js --config $(pwd)'/local/application-creds'
+  $ node node_modules/node-google-dfp-wrapper/generate-refresh-token.js --config $(pwd)'/local/application-creds' --authCode <auth code>
   ```
-    node node_modules/node-google-dfp-wrapper/generate-authentication-url.js --config $(pwd)'/local/application-creds'
-  node node_modules/node-google-dfp-wrapper/generate-refresh-token.js --config $(pwd)'/local/application-creds' --authCode <auth code>
-  ```
-  
+
 
 This will output a refresh token.
 
@@ -98,4 +98,3 @@ This will output a refresh token.
   }
 }
 ```
-
